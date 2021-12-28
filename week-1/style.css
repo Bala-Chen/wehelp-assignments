@@ -116,22 +116,29 @@ input{
         top:50px;
         right: 0;
         width: 50%;
-        height: 42%;
+        height: 40%;
         margin: 0;
         box-shadow: -5px 5px 20px #b53636;
+        overflow-y: auto;
     }
     .nav-item{
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        margin: 10px auto;
         padding: 10px 0;
         border-style: double;
-        border-width: 5px;
+        border-width: 7px;
         border-color: #FFFFFF;
     }
     .nav-item:hover{
         background-color: rgb(218, 51, 137);
     }
-    .nav-links a{
+    .nav-item a{
+        color: #FFFFFF;
+    }
+    .nav-item a:hover{
         color: #FFFFFF;
     }
     label{
