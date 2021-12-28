@@ -40,6 +40,9 @@ input{
     font-size: 20px;
     margin: 10px;
 }
+.nav-item a:hover{
+    color:  rgb(124, 16, 72);;
+}
 .nav-links a{
     color: #dd4b55;
     text-decoration: none;
@@ -121,8 +124,12 @@ input{
         display: block;
         text-align: center;
         padding: 10px 0;
-        border-style: solid;
+        border-style: double;
+        border-width: 5px;
         border-color: #FFFFFF;
+    }
+    .nav-item:hover{
+        background-color: rgb(218, 51, 137);
     }
     .nav-links a{
         color: #FFFFFF;
