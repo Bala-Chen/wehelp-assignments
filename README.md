@@ -1,6 +1,7 @@
 # wehelp-assignments
 ### This is the journey of becoming a software engineer.
-
+<br/>
+<br/>
 
 ## The First Stage
 ### **This is a stage where you are familiar with the front-end and back-end basics.**
