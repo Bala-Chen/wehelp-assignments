@@ -1,5 +1,5 @@
 # wehelp-assignments
-### *This is the journey of becoming a software engineer.*
+### This is the journey of becoming a software engineer.
 
 
 ## The First Stage
