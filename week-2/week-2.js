@@ -38,6 +38,7 @@ avg({
 });
 
 //Q3
+//Time complexity :O(n^2)
 function maxProduct(nums){
     let multiply = []
     for (i = 0; i < nums.length; i++){
@@ -78,6 +79,7 @@ let result = twoSum([2,11,7,15],9);
 console.log(result);
 
 //Q5
+//Time complexity :O(n)
 function maxZeros(nums){
     let max_count = []
     let count = 0
