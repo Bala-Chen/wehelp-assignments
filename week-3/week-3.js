@@ -11,11 +11,11 @@ f
     return all_data;
 })
 .then(function(allData){
-    var mainData = []
+    let mainData = []
     for (i = 0; i < allData.length; i++){
-        var stitle = allData[i]["stitle"];
-        var img = allData[i]["file"];
-        var img_one=img.split("https://")[1];
+        let stitle = allData[i]["stitle"];
+        let img = allData[i]["file"];
+        let img_one=img.split("https://")[1];
         const dict = {"stitle":stitle,"img":"https://" + img_one};
         mainData.push(dict)
     }
@@ -29,17 +29,17 @@ f
 
 function create_El(data){
     for (i = 0; i < data.length; i++){
-        var main = document.getElementById("main");
+        let main = document.getElementById("main");
         if(i % 4 == 0){
             var div_area = document.createElement('div');
             div_area.className = "div-area";
         };
-        var new_div = document.createElement('div');
+        let new_div = document.createElement('div');
         new_div.className = "main-item";
-        var one_img = document.createElement('img');
+        let one_img = document.createElement('img');
         one_img.src = data[i]["img"];
         new_div.appendChild(one_img);
-        var stitle_h4 = document.createElement('h4');
+        let stitle_h4 = document.createElement('h4');
         stitle_h4.textContent = data[i]["stitle"];
         new_div.appendChild(stitle_h4);
         div_area.appendChild(new_div);
@@ -51,9 +51,9 @@ function create_El(data){
 };
 
 function create_btn(){
-    var btn_div = document.createElement('div');
+    let btn_div = document.createElement('div');
     btn_div.className = "btn-area";
-    var btn = document.createElement('button');
+    let btn = document.createElement('button');
     btn.className = "btn";
     btn.textContent = "Load More";
     btn_div.appendChild(btn);
@@ -61,9 +61,9 @@ function create_btn(){
 };
 
 function loadMore(){
-    var items = document.querySelectorAll('.main-item');
-    var btn = document.querySelector('button');
-    var current_div = 8
+    let items = document.querySelectorAll('.main-item');
+    let btn = document.querySelector('button');
+    let current_div = 8
     btn.addEventListener('click',function(){
         for(i = current_div; i < current_div + 8;i++){
             if(items[i]){
