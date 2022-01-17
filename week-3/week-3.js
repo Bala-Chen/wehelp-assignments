@@ -3,75 +3,75 @@ const jsonUrl ="https://padax.github.io/taipei-day-trip-resources/taipei-attract
 let f = fetch(jsonUrl);
 
 f
-.then(function(user_data){
-    return user_data.json();
+.then(function(userData){
+    return userData.json();
 })
-.then(function(json_data){
-    all_data = json_data.result.results;
-    return all_data;
+.then(function(jsonData){
+    allData = jsonData.result.results;
+    return allData;
 })
-.then(function(all_data){
-    let main_data = []
-    for (i = 0; i < all_data.length; i++){
-        let stitle = all_data[i]["stitle"];
-        let img = all_data[i]["file"];
-        let img_one = img.split("https://")[1];
-        const dict = {"stitle":stitle,"img":"https://" + img_one};
-        main_data.push(dict)
+.then(function(allData){
+    let mainData = []
+    for (i = 0; i < allData.length; i++){
+        let stitle = allData[i]["stitle"];
+        let img = allData[i]["file"];
+        let imgOne = img.split("https://")[1];
+        const dict = {"stitle":stitle,"img":"https://" + imgOne};
+        mainData.push(dict)
     }
-    return main_data;
+    return mainData;
 })
-.then(function(main_data){
-    create_el(main_data);
-    create_btn(); 
-    load_more()
+.then(function(mainData){
+    createEl(mainData);
+    createBtn(); 
+    loadMore()
 })
 
-function create_el(data){
+function createEl(data){
     for (i = 0; i < data.length; i++){
         let main = document.getElementById("main");
         if(i % 4 == 0){
-            var div_area = document.createElement('div');
-            div_area.className = "div-area";
+            divArea = document.createElement('div');
+            divArea.className = "div-area";
         };
-        let new_div = document.createElement('div');
-        new_div.className = "main-item";
-        let one_img = document.createElement('img');
-        one_img.src = data[i]["img"];
-        new_div.appendChild(one_img);
-        let stitle_h4 = document.createElement('h4');
-        stitle_h4.textContent = data[i]["stitle"];
-        new_div.appendChild(stitle_h4);
-        div_area.appendChild(new_div);
-        main.appendChild(div_area);
+        let newDiv = document.createElement('div');
+        newDiv.className = "main-item";
+        let oneImg = document.createElement('img');
+        oneImg.src = data[i]["img"];
+        newDiv.appendChild(oneImg);
+        let stitleH4 = document.createElement('h4');
+        stitleH4.textContent = data[i]["stitle"];
+        newDiv.appendChild(stitleH4);
+        divArea.appendChild(newDiv);
+        main.appendChild(divArea);
         if(i >= 8){
-            new_div.style.display = "none"
+            newDiv.style.display = "none"
         }
     }
 };
 
-function create_btn(){
-    let btn_div = document.createElement('div');
-    btn_div.className = "btn-area";
+function createBtn(){
+    let btnDiv = document.createElement('div');
+    btnDiv.className = "btn-area";
     let btn = document.createElement('button');
     btn.className = "btn";
     btn.textContent = "Load More";
-    btn_div.appendChild(btn);
-    document.body.appendChild(btn_div)
+    btnDiv.appendChild(btn);
+    document.body.appendChild(btnDiv)
 };
 
-function load_more(){
+function loadMore(){
     let items = document.querySelectorAll('.main-item');
     let btn = document.querySelector('button');
-    let current_div = 8
+    let currentDiv = 8
     btn.addEventListener('click',function(){
-        for(i = current_div; i < current_div + 8;i++){
+        for(i = currentDiv; i < currentDiv + 8;i++){
             if(items[i]){
                 items[i].style.display = "block"; 
             }
         }
-        current_div += 8;
-        if(current_div >= items.length){
+        currentDiv += 8;
+        if(currentDiv >= items.length){
             btn.style.display = "none";
         }
     })
