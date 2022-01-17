@@ -3,31 +3,31 @@ const jsonUrl ="https://padax.github.io/taipei-day-trip-resources/taipei-attract
 let f = fetch(jsonUrl);
 
 f
-.then(function(userData){
-    return userData.json();
+.then(function(user_data){
+    return user_data.json();
 })
-.then(function(jsonData){
-    all_data = jsonData.result.results;
+.then(function(json_data){
+    all_data = json_data.result.results;
     return all_data;
 })
-.then(function(allData){
-    let mainData = []
-    for (i = 0; i < allData.length; i++){
-        let stitle = allData[i]["stitle"];
-        let img = allData[i]["file"];
-        let img_one=img.split("https://")[1];
+.then(function(all_data){
+    let main_data = []
+    for (i = 0; i < all_data.length; i++){
+        let stitle = all_data[i]["stitle"];
+        let img = all_data[i]["file"];
+        let img_one = img.split("https://")[1];
         const dict = {"stitle":stitle,"img":"https://" + img_one};
-        mainData.push(dict)
+        main_data.push(dict)
     }
-    return mainData;
+    return main_data;
 })
 .then(function(main_data){
-    create_El(main_data);
+    create_el(main_data);
     create_btn(); 
-    loadMore()
+    load_more()
 })
 
-function create_El(data){
+function create_el(data){
     for (i = 0; i < data.length; i++){
         let main = document.getElementById("main");
         if(i % 4 == 0){
@@ -60,7 +60,7 @@ function create_btn(){
     document.body.appendChild(btn_div)
 };
 
-function loadMore(){
+function load_more(){
     let items = document.querySelectorAll('.main-item');
     let btn = document.querySelector('button');
     let current_div = 8
