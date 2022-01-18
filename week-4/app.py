@@ -34,8 +34,8 @@ def error():
     message = request.args.get("message")
     return render_template("error.html",message = message)
 
-@app.route("/signup")
-def signup():
+@app.route("/signout")
+def signout():
     del session["name"]
     return redirect("/")
 
