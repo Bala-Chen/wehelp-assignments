@@ -13,3 +13,9 @@
 <img src="./img/4-1.png">
 <img src="./img/4-2.png">
 <img src="./img/4-3.png">
+
+### SQL JOIN(Optional)
+
+<img src="./img/5-0.png">
+<img src="./img/5-1.png">
+<img src="./img/5-2.png">
