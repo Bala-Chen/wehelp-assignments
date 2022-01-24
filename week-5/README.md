@@ -1,6 +1,6 @@
 ### SQL CRUD
 
-!(img/3-1.png)
+!(/Users/mac/Documents/GitHub/wehelp-assignments/week-5/img/3-1.png)
 !(img/3-2.png)
 !(img/3-3.png)
 !(img/3-4.png)
