@@ -7,8 +7,8 @@
 
 - [x] Week1 - HTML, CSS and RWD application
 - [x] Week2 - JavaScript and Python basics
-- [ ] Week3 - JavaScript and Python application
-- [ ] Week4 - Flask
+- [x] Week3 - JavaScript and Python application
+- [x] Week4 - Flask
 - [ ] Week5 - MySQL
 - [ ] Week6 - Member System Development
 - [ ] Week7 - AJAX
