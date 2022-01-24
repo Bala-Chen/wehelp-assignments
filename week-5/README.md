@@ -14,7 +14,7 @@
 <img src="./img/4-2.png">
 <img src="./img/4-3.png">
 
-#### 因為都是0怪怪的，所以在部分member資料更新follower_count確認sum,avg的數值變化
+#### 因為上面都是0很沒有運算的感覺，所以在部分member資料更新follower_count確認sum,avg的數值變化
 <img src="./img/4-4.png">
 
 ### SQL JOIN(Optional)
