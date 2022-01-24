@@ -11,12 +11,12 @@ calculate(4,8)
 
 //Q2
 function avg(data){
-    let sum_salary = 0;
+    let sumSalary = 0;
     for(j = 0; j < data["count"]; j++){
-        let emp_salary = data["employees"][j]&&data["employees"][j]["salary"];
-        sum_salary += emp_salary
+        let empSalary = data["employees"][j]&&data["employees"][j]["salary"];
+        sumSalary += empSalary
     };
-    console.log(sum_salary / data["count"]);
+    console.log(sumSalary / data["count"]);
 }
 
 avg({
@@ -46,14 +46,14 @@ function maxProduct(nums){
             if (i == n){
                 continue
             };
-            let mul_num = nums[i] * nums[n];
-            if (multiply.includes(mul_num) == false){
-                multiply.push(mul_num)
+            let mulNum = nums[i] * nums[n];
+            if (multiply.includes(mulNum) == false){
+                multiply.push(mulNum)
             }
         }
     }
-    mul_max = Math.max.apply(null,multiply);
-    console.log(mul_max)
+    mulMax = Math.max.apply(null,multiply);
+    console.log(mulMax)
 }
 
 maxProduct([5,20,2,6])
@@ -65,13 +65,13 @@ maxProduct([-1,-2,0])
 //Q4
 function twoSum(nums,target){
     let dict = {};
-    for(let num_index = 0; num_index < nums.length;num_index++){
-        dict[nums[num_index]] = num_index;
+    for(let numIndex = 0; numIndex < nums.length;numIndex++){
+        dict[nums[numIndex]] = numIndex;
     }
-    for(let num_index_2 = 0; num_index_2 < nums.length;num_index_2++){
-        let goal = target - nums[num_index_2];
-        if (goal in dict && num_index_2 != dict[goal]){
-            return [num_index_2,dict[goal]]
+    for(let numIndex2 = 0; numIndex2 < nums.length;numIndex2++){
+        let goal = target - nums[numIndex2];
+        if (goal in dict && numIndex2 != dict[goal]){
+            return [numIndex2,dict[goal]]
         }
     }    
 }
@@ -81,20 +81,20 @@ console.log(result);
 //Q5
 //Time complexity :O(n)
 function maxZeros(nums){
-    let max_count = []
+    let maxCount = []
     let count = 0
     for(let i in nums){
         if (nums[i] == 0){
             count = count + 1
         };
         if (nums[i] != 0){
-            max_count.push(count);
+            maxCount.push(count);
             count = 0;
             continue
         };
     };
-    max_count.push(count);
-    console.log(Math.max.apply(null,max_count));
+    maxCount.push(count);
+    console.log(Math.max.apply(null,maxCount));
 }
 maxZeros([0,1,0,0])
 maxZeros([1,0,0,0,0,1,0,1,0,0])
