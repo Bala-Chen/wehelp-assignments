@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}<title>Member</title>{% endblock %}
+{% block header %}<h1>歡迎光臨，這是會員頁</h1>{% endblock %}
+{% block main %}
+<div class="container">
+    <div class="box">
+        <h2>{{name}}，歡迎登入系統</h2>
+        <a href="/signout"><h2>登出系統</h2></a>
+    </div>
+</div>
+{% endblock %}
