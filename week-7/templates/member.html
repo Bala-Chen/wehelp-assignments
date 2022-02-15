@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Member</title>
+{% endblock %}
+{% block header %}<h1>歡迎光臨，這是會員頁</h1>{% endblock %}
+{% block main %}
+<div class="container">
+    <div class="box">
+        <h2>{{name}}，歡迎登入系統</h2>
+        <a href="/signout"><h2>登出系統</h2></a>
+    </div>
+</div>
+<div class="container">
+    <div class="box">
+        <h2>查詢會員姓名</h2>
+        <div class="searchMember">
+            <label for="inputQueryStr"></label>
+            <input type="text" name="username" id="inputQueryStr" required>
+            <button class="submitBtn">查詢</button>
+        </div>
+        <div id="output"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="box">
+        <h2>更新我的姓名</h2>
+        <div class="updateName">
+            <label for="inputNewName"></label>
+            <input type="text" name="name" id="inputNewName" placeholder="輸入新的姓名">
+            <button class="submitUpBtn">更新</button>
+        </div>
+        <div id="outputResult"></div>
+    </div>
+</div>
+{% endblock %}
+{% block script %}<script src="/static/script.js"></script>{% endblock %}
