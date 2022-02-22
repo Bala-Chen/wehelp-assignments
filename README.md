@@ -9,7 +9,7 @@
 - [x] Week2 - JavaScript and Python basics
 - [x] Week3 - JavaScript and Python application
 - [x] Week4 - Flask
-- [ ] Week5 - MySQL
-- [ ] Week6 - Member System Development
-- [ ] Week7 - AJAX
+- [x] Week5 - MySQL
+- [x] Week6 - Member System Development
+- [x] Week7 - AJAX
 - [ ] Week8 - Topic Learning
